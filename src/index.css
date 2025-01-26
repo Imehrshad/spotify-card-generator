@@ -1,0 +1,34 @@
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+@layer base {
+  @font-face {
+    font-family: "gotham";
+    src: url("/fonts/Gotham-Bold.otf");
+    font-weight: bold;
+  }
+  @font-face {
+    font-family: "gotham";
+    src: url("/fonts/GothaMedium.ttf");
+    font-weight: normal;
+  }
+  @font-face {
+    font-family: "noto";
+    src: url("/fonts/NotoSansArabic_Condensed-SemiBold.ttf");
+    font-weight: normal;
+  }
+  @font-face {
+    font-family: "noto";
+    src: url("/fonts/NotoSansArabic-Bold.ttf");
+    font-weight: bold;
+  }
+
+  .dual-font {
+    font-family: gotham, noto, sans-serif;
+  }
+}
+
+body {
+  @apply max-w-[450px] mx-auto bg-zinc-900 font-gotham;
+}
