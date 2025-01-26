@@ -49,7 +49,7 @@ const Card = ({ values, clickCounter, cardRef }) => {
       >
         <div className="flex items-center justify-start gap-5 w-full">
           <img
-            src={imageUrl || "default-image-path.jpg"}
+            src={imageUrl || "/images/dummy.png"}
             alt="album cover"
             className="w-24 h-24"
           />

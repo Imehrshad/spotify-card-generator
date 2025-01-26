@@ -1,6 +1,6 @@
 import { useRef, useState } from "react";
 import Card from "./components/Card";
-import ResultImage from "./components/ResultImage";
+
 
 function App() {
   const [values, setValues] = useState({
