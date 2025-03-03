@@ -3,7 +3,7 @@ import SpotifySvg from "./SpotifySvg";
 import html2canvas from "html2canvas";
 
 const Card = ({ values, clickCounter, cardRef }) => {
-  const { song, artist, lyrics, musicCover, logoColor, backgroundColor, size } =
+  const { song, artist, lyrics, musicCover, logoColor, backgroundColor, size, lyricsTextAlign } =
     values;
   const [imageUrl, setImageUrl] = useState(null);
   const downloadAsImage = async () => {
@@ -66,7 +66,7 @@ const Card = ({ values, clickCounter, cardRef }) => {
         <div className="w-full dual-font">
           <p 
             className="text-xl font-bold w-full whitespace-pre-wrap break-words overflow-wrap-anywhere text-center"
-            style={{ wordBreak: 'break-word' }}
+            style={{ wordBreak: "break-word", textAlign: lyricsTextAlign }}
           >
             {lyrics || "lorem ipsum dolor sit amet"}
           </p>

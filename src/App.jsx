@@ -10,6 +10,7 @@ function App() {
     backgroundColor: "",
     logoColor: "",
     size: "1/1",
+    lyricsTextAlign: "center",
   });
   const cardRef = useRef(null);
   const [clickCounter, setClickCounter] = useState(0);
@@ -91,10 +92,31 @@ function App() {
                 onChange={(e) => setValues({ ...values, size: e.target.value })}
                 className="bg-zinc-400 rounded-lg focus:outline-none border-zinc-800 border-2 px-3 py-1 w-full"
               >
-                <option selected value="1/1">
+                <option selected value="1/1" className="text-center">
                   1:1
                 </option>
-                <option value="16/9">16:9</option>
+                <option value="16/9" className="text-center">
+                  16:9
+                </option>
+              </select>
+            </div>
+            <div className=" flex flex-col items-center w-full justify-center gap-1 w-f">
+              <label className="w-full text-center">Lyrics text align</label>
+              <select
+                onChange={(e) =>
+                  setValues({ ...values, lyricsTextAlign: e.target.value })
+                }
+                className="bg-zinc-400 rounded-lg focus:outline-none border-zinc-800 border-2 px-3 py-1 w-full"
+              >
+                <option selected value="center" className="text-center">
+                  Center
+                </option>
+                <option value="left" className="text-center">
+                  Left
+                </option>
+                <option value="right" className="text-center">
+                  Right
+                </option>
               </select>
             </div>
             <button
